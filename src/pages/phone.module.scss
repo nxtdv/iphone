@@ -1,0 +1,136 @@
+* {
+  user-select: none;
+  text-decoration: "none";
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.loading {
+  color: #ff0000;
+}
+
+.phoneContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 297px;
+  height: 601.46px;
+  margin-bottom: 10px;
+  margin-right: 8px;
+  font-family: "SF-Pro-Text-Bold";
+
+  .phoneCoque {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url("../assets/coque.png");
+    pointer-events: none;
+  }
+
+  .phoneContent {
+    width: 287px;
+    height: 590px;
+    margin-left: 5px;
+    margin-top: 3px;
+    border-radius: 45px;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url("../assets/IOS16.png");
+
+    .locked {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
+    }
+  }
+}
+
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none; /*remove the resize handle on the bottom right*/
+}
+
+/**
+   * ----------------------------------------
+   * animation scale-in-center for app
+   * ----------------------------------------
+   */
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+/* Hide scrolls */
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}

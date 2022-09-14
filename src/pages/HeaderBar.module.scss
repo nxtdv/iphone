@@ -1,0 +1,48 @@
+.phoneHeader {
+  width: 100%;
+  user-select: none;
+  padding: 31px 0 12px 0;
+  height: 13px;
+  font-family: "SF-Pro-Text-Bold";
+  position: relative;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+
+  &.phoneHeaderLight {
+    fill: white;
+    color: white;
+  }
+
+  &.phoneHeaderDark {
+    fill: black;
+    color: black;
+  }
+}
+
+.phoneHeaderLeft {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 70px;
+}
+
+.phoneHeaderRight {
+  display: flex;
+  align-items: center;
+  margin: 0 32px 0 0;
+}
+
+.phoneHeaderIcon {
+  margin: 0 2px 0 2px;
+  height: 8px;
+  color: aqua;
+  fill: aqua;
+}
+
+.phoneHeaderTime {
+  font-size: 10.5px;
+  font-family: "SF-Pro-Text-Semibold";
+  line-height: 22px;
+  letter-spacing: -0.41px;
+  margin: 0;
+}
