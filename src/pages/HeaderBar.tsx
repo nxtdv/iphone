@@ -36,7 +36,6 @@ const HeaderBar = ({ lock }: Locked) => {
               fontFamily="SF-Pro-Text-Semibold"
               lineHeight="22px"
               letterSpacing="-0.41px"
-              // height="0"
             />
           </div>
           <div className={styles.phoneHeaderRight}>
