@@ -1,8 +1,8 @@
 import styles from "./HeaderBar.module.scss";
 import CurrentTime from "../components/times/CurrentTime";
-import batterie from "../../public/batterie.svg";
-import wifi from "../../public/wifi.svg";
-import mobilesignal from "../../public/MobileSignal.svg";
+import batterie from "/batterie.svg";
+import wifi from "/wifi.svg";
+import mobilesignal from "/MobileSignal.svg";
 
 type Locked = {
   lock: boolean;
