@@ -20,10 +20,10 @@ const CurrentDate = () => {
     <div
       style={{
         display: "flex",
-        fontFamily: "SF-Pro-Text-Semibold",
+        fontFamily: "SF-Pro-Display-Medium",
         fontSize: "11px",
         lineHeight: "24px",
-        letterSpacing: "-0.41px",
+        letterSpacing: "0.38px",
         color: "rgba(255, 255, 255, 0.7)",
       }}
     >
