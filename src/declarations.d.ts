@@ -8,6 +8,6 @@ declare module "*.jpg";
 declare module "*.jpeg";
 declare module "*.gif";
 declare module "*.svg" {
-  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+  const content: any;
   export default content;
 }
