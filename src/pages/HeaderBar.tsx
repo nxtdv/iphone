@@ -1,7 +1,7 @@
 import styles from "./HeaderBar.module.scss";
 import CurrentTime from "../components/times/CurrentTime";
 import batterie from "/batterie.svg";
-import wifi from "/wifi.svg";
+import wifi from "/Wifi.svg";
 import mobilesignal from "/MobileSignal.svg";
 
 type Locked = {
