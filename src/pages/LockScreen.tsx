@@ -1,6 +1,8 @@
 import background from "/img/lockscreen.png";
+import camera from "/camera.svg";
 import CurrentDate from "../components/date/CurrentDate";
 import CurrentTime from "../components/times/CurrentTime";
+import flash from "/flash.svg";
 import HeaderBar from "./HeaderBar";
 import styles from "./LockScreen.module.scss";
 import { animated, useSpring } from "react-spring";
@@ -42,7 +44,7 @@ function linearConversion(a: number[], b: number[]) {
 
 export function LockScreen({ children }: LockScreenProps) {
   const showLockOnMount = true;
-  const height = 600;
+  const height = 590;
   const PANEL_THRESHOLD = 150;
   const LOCK_THRESHOLD = height / 2;
   const convert = linearConversion([height - 100, height], [12, 0]);
@@ -207,7 +209,7 @@ export function LockScreen({ children }: LockScreenProps) {
             />
             <div className={styles.LockScreenDateTime}>
               <HeaderBar lock={true} />
-              <div className={styles.locked}>
+              <div className={styles.LockScreenTime}>
                 <CurrentDate />
                 <CurrentTime
                   fontSize="70px"
@@ -217,7 +219,14 @@ export function LockScreen({ children }: LockScreenProps) {
                   height="62px"
                 />
               </div>
-              <div className={styles.LockScreenButtonContainer}></div>
+              <div className={styles.LockScreenButtonContainer}>
+                <button className={styles.LockScreenButton}>
+                  <img src={flash} className={styles.flash} alt="flash" />
+                </button>
+                <button className={styles.LockScreenButton}>
+                  <img src={camera} className={styles.camera} alt="camera" />
+                </button>
+              </div>
               <div className={styles.LockScreenSwipeBar} />
             </div>
           </div>
