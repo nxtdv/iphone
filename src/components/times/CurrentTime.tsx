@@ -35,7 +35,7 @@ const CurrentTime = ({
         lineHeight: lineHeight,
         letterSpacing: letterSpacing,
         height: height,
-        color: "rgba(255, 255, 255, 0.6)",
+        color: "rgba(255, 255, 255, 0.8)",
         display: "flex",
         alignItems: "center",
       }}

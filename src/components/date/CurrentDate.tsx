@@ -24,7 +24,7 @@ const CurrentDate = () => {
         fontSize: "11px",
         lineHeight: "24px",
         letterSpacing: "0.38px",
-        color: "rgba(255, 255, 255, 0.7)",
+        color: "rgba(255, 255, 255, 0.8)",
       }}
     >
       {strUcFirst(
