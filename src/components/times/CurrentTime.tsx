@@ -16,7 +16,7 @@ const CurrentTime = ({
   height,
 }: Time) => {
   const [date, setDate] = useState(new Date());
-  let dateInterval: any;
+  let dateInterval: undefined | number | NodeJS.Timeout;
 
   const updateDate = () => setDate(new Date());
 

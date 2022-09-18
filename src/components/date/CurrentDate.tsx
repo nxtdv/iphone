@@ -7,7 +7,7 @@ function strUcFirst(a: string) {
 const CurrentDate = () => {
   const [date, setDate] = useState(new Date());
   const updateDate = () => setDate(new Date());
-  let dateInterval: any;
+  let dateInterval: undefined | number | NodeJS.Timeout;
 
   useEffect(() => {
     dateInterval = setInterval(updateDate, 10000);
