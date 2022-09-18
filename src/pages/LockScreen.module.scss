@@ -33,7 +33,7 @@
         align-items: center;
         flex-direction: column;
 
-        .locked {
+        .LockScreenTime {
           display: flex;
           justify-content: center;
           flex-direction: column;
@@ -42,10 +42,34 @@
         }
 
         .LockScreenButtonContainer {
-          padding: 2.5rem;
+          margin-top: 330px;
+          padding: 2.5rem 2.5rem 1.5rem 2.5rem;
           display: flex;
           align-self: stretch;
           justify-content: space-between;
+
+          .LockScreenButton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: rgba(37, 37, 37, 0.28);
+            backdrop-filter: blur(42px);
+
+            border-radius: 100px;
+            border: none;
+
+            .flash {
+              width: 15px;
+              height: 15px;
+            }
+
+            .camera {
+              width: 15px;
+              height: 15px;
+            }
+          }
         }
 
         .LockScreenSwipeBar {
