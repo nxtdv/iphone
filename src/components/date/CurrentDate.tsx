@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./currentDate.module.scss";
 
 function strUcFirst(a: string) {
   return (a + "").charAt(0).toUpperCase() + a.substr(1);
@@ -17,16 +18,7 @@ const CurrentDate = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        fontFamily: "SF-Pro-Display-Medium",
-        fontSize: "11px",
-        lineHeight: "24px",
-        letterSpacing: "0.38px",
-        color: "rgba(255, 255, 255, 0.8)",
-      }}
-    >
+    <div className={styles.date}>
       {strUcFirst(
         date.toLocaleDateString("fr-FR", {
           weekday: "long",
