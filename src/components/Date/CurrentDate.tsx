@@ -18,7 +18,7 @@ const CurrentDate = () => {
   }, []);
 
   return (
-    <div className={styles.date}>
+    <div className={styles.dateContainer}>
       {strUcFirst(
         date.toLocaleDateString("fr-FR", {
           weekday: "long",
