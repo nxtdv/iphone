@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function strUcFirst(a: string) {
   return (a + "").charAt(0).toUpperCase() + a.substr(1);
