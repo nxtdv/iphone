@@ -7,7 +7,6 @@ function Home() {
       <HeaderBar lock={false} />
       <div className={styles.container}>
         <p>children</p>
-        <h3>Je suis dans le components Home</h3>
       </div>
     </>
   );
