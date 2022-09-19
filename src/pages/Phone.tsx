@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import styles from "./phone.module.scss";
 import { LockScreen } from "./LockScreen/LockScreen";
 import HeaderBar from "../components/HeaderBar/HeaderBar";
+import Home from "./Home/Home";
 
 function Phone() {
   const loading = () => <div className={styles.loading}>Chargement...</div>;
@@ -13,10 +14,7 @@ function Phone() {
       <Suspense fallback={loading()}>
         <div className={styles.phoneContent}>
           <LockScreen>
-            <HeaderBar lock={false} />
-            <div className={styles.container}>
-              <p>children</p>
-            </div>
+            <Home />
           </LockScreen>
         </div>
       </Suspense>
