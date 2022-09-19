@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import styles from "./phone.module.scss";
 import { LockScreen } from "./LockScreen/LockScreen";
-import HeaderBar from "../components/HeaderBar/HeaderBar";
 import Home from "./Home/Home";
 
 function Phone() {
