@@ -1,5 +1,5 @@
 import styles from "./HeaderBar.module.scss";
-import CurrentTime from "../time/CurrentTime";
+import CurrentTime from "../Time/CurrentTime";
 import batterie from "/batterie.svg";
 import wifi from "/Wifi.svg";
 import mobilesignal from "/MobileSignal.svg";
