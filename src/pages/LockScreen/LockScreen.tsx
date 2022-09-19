@@ -3,7 +3,7 @@ import { animated, useSpring } from "react-spring";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { StateType, useGestureResponder } from "react-gesture-responder";
 import HeaderBar from "../../components/HeaderBar/HeaderBar";
-import CurrentDate from "../../components/Date1/CurrentDate";
+import CurrentDate from "../../components/Date/CurrentDate";
 import CurrentTime from "../../components/Time/CurrentTime";
 import styles from "./LockScreen.module.scss";
 import background from "/img/lockscreen.png";
