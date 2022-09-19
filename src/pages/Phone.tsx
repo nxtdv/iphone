@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import styles from "./phone.module.scss";
-import { LockScreen } from "./LockScreen";
-import HeaderBar from "./HeaderBar";
+import { LockScreen } from "./LockScreen/LockScreen";
+import HeaderBar from "../components/HeaderBar/HeaderBar";
 
 function Phone() {
   const loading = () => <div className={styles.loading}>Chargement...</div>;

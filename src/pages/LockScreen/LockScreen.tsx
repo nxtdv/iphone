@@ -1,9 +1,9 @@
 import background from "/img/lockscreen.png";
 import camera from "/camera.svg";
-import CurrentDate from "../components/date/CurrentDate";
-import CurrentTime from "../components/times/CurrentTime";
+import CurrentDate from "../../components/Date/CurrentDate";
+import CurrentTime from "../../components/Time/CurrentTime";
 import flash from "/flash.svg";
-import HeaderBar from "./HeaderBar";
+import HeaderBar from "../../components/HeaderBar/HeaderBar";
 import styles from "./LockScreen.module.scss";
 import { animated, useSpring } from "react-spring";
 import { clamp } from "lodash-es";
