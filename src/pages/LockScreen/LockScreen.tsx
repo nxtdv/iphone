@@ -95,7 +95,7 @@ export function LockScreen({ children }: LockScreenProps) {
 
     function open() {
       setShowing(true);
-      setLock({ y: height, immediate: false });
+      setLock.start({ y: height, immediate: false });
     }
 
     function close() {
