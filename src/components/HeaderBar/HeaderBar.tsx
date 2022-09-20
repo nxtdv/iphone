@@ -33,7 +33,7 @@ const HeaderBar = ({ lock }: Locked) => {
           <div className={styles.phoneHeaderLeft}>
             <CurrentTime
               fontSize="10.5px"
-              fontFamily="SF-Pro-Text-Semibold"
+              fontFamily="SF-Pro-Text-Regular"
               lineHeight="22px"
               letterSpacing="-0.41px"
             />
