@@ -1,5 +1,7 @@
+import AppContainer from "../../../components/AppContainer/AppContainer";
+
 function Notes() {
-  return <div>Notes</div>;
+  return <AppContainer isDarkMode>Notes</AppContainer>;
 }
 
 export default Notes;
