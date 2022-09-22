@@ -14,7 +14,8 @@
     "react-dom": "^18.2.0",
     "react-gesture-responder": "^2.1.0",
     "react-router-dom": "^6.4.0",
-    "react-spring": "^9.5.4"
+    "react-spring": "^9.5.4",
+    "react-svg": "^15.1.9"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.6",
