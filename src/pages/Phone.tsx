@@ -22,7 +22,7 @@ function Phone() {
       <Suspense fallback={loading()}>
         <div className={styles.phoneContent}>
           <LockScreen>
-            <BrowserRouter basename="/iphone">
+            <BrowserRouter basename="/iphone/">
               <Routes>
                 <Route path="/" element={<Home />} />
                 {routes}
