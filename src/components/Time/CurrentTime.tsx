@@ -6,7 +6,8 @@ interface Time {
   lineHeight: string;
   letterSpacing: string;
   height?: string;
-  onLockScreen?: boolean;
+  color: string;
+  isDarkMode?: boolean;
 }
 
 const CurrentTime = ({
@@ -15,7 +16,8 @@ const CurrentTime = ({
   lineHeight,
   letterSpacing,
   height,
-  onLockScreen,
+  color,
+  isDarkMode = false,
 }: Time) => {
   const [date, setDate] = useState(new Date());
   let dateInterval: undefined | number | NodeJS.Timeout;
@@ -37,7 +39,7 @@ const CurrentTime = ({
         lineHeight: lineHeight,
         letterSpacing: letterSpacing,
         height: height,
-        color: onLockScreen ? "rgba(255, 255, 255, 0.8)" : "#fff",
+        color: isDarkMode ? "#000" : color,
         display: "flex",
         alignItems: "center",
       }}
