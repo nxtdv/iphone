@@ -4,52 +4,49 @@ import batterie from "/batterie.svg";
 import wifi from "/Wifi.svg";
 import mobilesignal from "/MobileSignal.svg";
 
-type Locked = {
+import { ReactSVG } from "react-svg";
+
+type Props = {
   lock: boolean;
+  isDarkMode?: boolean;
 };
 
-const HeaderBar = ({ lock }: Locked) => {
+const HeaderBar = ({ lock, isDarkMode }: Props) => {
   return (
     <>
       {lock ? (
-        <div className={`${styles.phoneHeader} ${styles.phoneHeaderLight}`}>
+        <div
+          className={`${styles.phoneHeader} ${
+            isDarkMode ? styles.phoneHeaderDark : styles.phoneHeaderLight
+          }`}
+        >
           <div className={styles.phoneHeaderLeft} />
           <div className={styles.phoneHeaderRight}>
-            <img
-              className={styles.phoneHeaderIcon}
-              src={mobilesignal}
-              alt="MobileSignal"
-            />
-            <img className={styles.phoneHeaderIcon} src={wifi} alt="wifi" />
-            <img
-              className={styles.phoneHeaderIcon}
-              src={batterie}
-              alt="batterie"
-            />
+            <ReactSVG className={styles.phoneHeaderIcon} src={mobilesignal} />
+            <ReactSVG className={styles.phoneHeaderIcon} src={wifi} />
+            <ReactSVG className={styles.phoneHeaderIcon} src={batterie} />
           </div>
         </div>
       ) : (
-        <div className={`${styles.phoneHeader} ${styles.phoneHeaderLight}`}>
+        <div
+          className={`${styles.phoneHeader} ${
+            isDarkMode ? styles.phoneHeaderDark : styles.phoneHeaderLight
+          }`}
+        >
           <div className={styles.phoneHeaderLeft}>
             <CurrentTime
               fontSize="10.5px"
               fontFamily="SF-Pro-Text-Regular"
               lineHeight="22px"
               letterSpacing="-0.41px"
+              color="#fff"
+              isDarkMode={isDarkMode}
             />
           </div>
           <div className={styles.phoneHeaderRight}>
-            <img
-              className={styles.phoneHeaderIcon}
-              src={mobilesignal}
-              alt="MobileSignal"
-            />
-            <img className={styles.phoneHeaderIcon} src={wifi} alt="wifi" />
-            <img
-              className={styles.phoneHeaderIcon}
-              src={batterie}
-              alt="batterie"
-            />
+            <ReactSVG className={styles.phoneHeaderIcon} src={mobilesignal} />
+            <ReactSVG className={styles.phoneHeaderIcon} src={wifi} />
+            <ReactSVG className={styles.phoneHeaderIcon} src={batterie} />
           </div>
         </div>
       )}
