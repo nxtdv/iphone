@@ -217,7 +217,7 @@ export function LockScreen({ children }: LockScreenProps) {
                   lineHeight="0"
                   letterSpacing="-2.12px"
                   height="62px"
-                  onLockScreen
+                  color="rgba(255, 255, 255, 0.8)"
                 />
               </div>
               <div className={styles.LockScreenButtonContainer}>
