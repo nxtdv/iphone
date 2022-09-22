@@ -1,13 +1,33 @@
 .phoneHeader {
-  width: 100%;
-  user-select: none;
-  padding: 31px 0 12px 0;
-  height: 13px;
-  font-family: "SF-Pro-Text-Bold";
-  position: relative;
-  z-index: 99;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  font-family: "SF-Pro-Text-Bold";
+  padding: 32px 0 12px 0;
+  user-select: none;
+  height: 13px;
+  width: 100%;
+  z-index: 99;
+
+  .phoneHeaderLeft {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+  }
+
+  .phoneHeaderRight {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+
+    .phoneHeaderIcon {
+      margin: -4px 2px 0 2px;
+
+      svg {
+        height: 8px;
+      }
+    }
+  }
 
   &.phoneHeaderLight {
     fill: white;
@@ -18,29 +38,4 @@
     fill: black;
     color: black;
   }
-}
-
-.phoneHeaderLeft {
-  display: flex;
-  align-items: center;
-  margin: 0 0 0 50px;
-}
-
-.phoneHeaderRight {
-  display: flex;
-  align-items: center;
-  margin: 0 32px 0 0;
-}
-
-.phoneHeaderIcon {
-  margin: 0 2px 0 2px;
-  height: 8px;
-}
-
-.phoneHeaderTime {
-  font-size: 10.5px;
-  font-family: "SF-Pro-Text-Semibold";
-  line-height: 22px;
-  letter-spacing: -0.41px;
-  margin: 0;
 }
