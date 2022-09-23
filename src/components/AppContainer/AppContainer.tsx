@@ -16,7 +16,9 @@ function AppContainer({
 }: PropsWithChildren<Props>) {
   return (
     <>
-      {showStatusBar && <HeaderBar lock={false} isDarkMode={isDarkMode} />}
+      {showStatusBar && (
+        <HeaderBar lock={false} isDarkMode={isDarkMode} isAppContainer />
+      )}
       {children}
       {showHomeButton && <HomeBar isDarkMode={isDarkMode} />}
     </>
