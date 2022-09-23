@@ -9,9 +9,10 @@ import { ReactSVG } from "react-svg";
 type Props = {
   lock: boolean;
   isDarkMode?: boolean;
+  isAppContainer?: boolean;
 };
 
-const HeaderBar = ({ lock, isDarkMode }: Props) => {
+const HeaderBar = ({ lock, isDarkMode, isAppContainer }: Props) => {
   return (
     <>
       {lock ? (
@@ -32,6 +33,13 @@ const HeaderBar = ({ lock, isDarkMode }: Props) => {
           className={`${styles.phoneHeader} ${
             isDarkMode ? styles.phoneHeaderDark : styles.phoneHeaderLight
           }`}
+          style={{
+            backgroundColor: isAppContainer
+              ? isDarkMode
+                ? "#fff"
+                : "#000"
+              : "transparent",
+          }}
         >
           <div className={styles.phoneHeaderLeft}>
             <CurrentTime
