@@ -1,5 +1,6 @@
 import { Suspense, lazy, useMemo } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Loading from "../components/Loading/Loading";
 import styles from "./phone.module.scss";
 import { LockScreen } from "./LockScreen/LockScreen";
 import appsRoutes from "./Apps/appsRoutes";
@@ -7,7 +8,6 @@ import appsRoutes from "./Apps/appsRoutes";
 const Home = lazy(() => import("./Home/Home"));
 
 function Phone() {
-  const loading = () => <div className={styles.loading}>Chargement...</div>;
   const routes = useMemo(() => {
     return appsRoutes.map((app) => {
       const Element = app.element;
@@ -19,7 +19,7 @@ function Phone() {
     <div className={styles.phoneContainer}>
       <div className={styles.phoneCoque} />
 
-      <Suspense fallback={loading()}>
+      <Suspense fallback={<Loading />}>
         <div className={styles.phoneContent}>
           <LockScreen>
             <BrowserRouter basename="/iphone/">
