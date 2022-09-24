@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import styles from "./Calculator.module.scss";
 import AppContainer from "../../../components/AppContainer/AppContainer";
 
