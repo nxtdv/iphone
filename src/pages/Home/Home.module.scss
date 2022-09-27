@@ -1,13 +1,17 @@
 .home {
   height: 100%;
   background-size: cover;
-
   .page {
-    margin: 25px 13px 0;
-    padding: 0 18px;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    row-gap: 14px;
-    justify-content: space-between;
+    padding-top: 2.5rem;
+    height: 100%;
+    box-sizing: border-box;
+    .appsContainer {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: repeat(4, auto);
+      margin: 25px 13px 0;
+      padding: 0 18px;
+      row-gap: 14px;
+    }
   }
 }

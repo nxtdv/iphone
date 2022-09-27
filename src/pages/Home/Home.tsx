@@ -1,9 +1,9 @@
 import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import appsRoutes from "../Apps/appsRoutes";
-import styles from "./Home.module.scss";
+import AppContainer from "../../components/AppContainer/AppContainer";
 import AppIcon from "../../components/AppIcon/AppIcon";
-import HeaderBar from "../../components/HeaderBar/HeaderBar";
+import styles from "./Home.module.scss";
 
 function Home() {
   const navigate = useNavigate();
@@ -23,12 +23,13 @@ function Home() {
   }, [navigate]);
 
   return (
-    <>
-      <HeaderBar lock={false} />
-      <div className={styles.home}>
-        <div className={styles.page}>{functioningApps}</div>
-      </div>
-    </>
+    <div className={styles.home}>
+      <AppContainer showHomeButton={false}>
+        <div className={styles.page}>
+          <div className={styles.appsContainer}>{functioningApps}</div>
+        </div>
+      </AppContainer>
+    </div>
   );
 }
 
