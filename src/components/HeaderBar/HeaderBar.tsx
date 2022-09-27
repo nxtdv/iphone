@@ -1,18 +1,16 @@
+import { ReactSVG } from "react-svg";
 import styles from "./HeaderBar.module.scss";
 import CurrentTime from "../Time/CurrentTime";
 import batterie from "/batterie.svg";
 import wifi from "/Wifi.svg";
 import mobilesignal from "/MobileSignal.svg";
 
-import { ReactSVG } from "react-svg";
-
 type Props = {
   lock: boolean;
   isDarkMode?: boolean;
-  isAppContainer?: boolean;
 };
 
-const HeaderBar = ({ lock, isDarkMode, isAppContainer }: Props) => {
+const HeaderBar = ({ lock, isDarkMode }: Props) => {
   return (
     <>
       {lock ? (
@@ -33,13 +31,7 @@ const HeaderBar = ({ lock, isDarkMode, isAppContainer }: Props) => {
           className={`${styles.phoneHeader} ${
             isDarkMode ? styles.phoneHeaderDark : styles.phoneHeaderLight
           }`}
-          style={{
-            backgroundColor: isAppContainer
-              ? isDarkMode
-                ? "#fff"
-                : "#000"
-              : "transparent",
-          }}
+          style={{ position: "absolute" }}
         >
           <div className={styles.phoneHeaderLeft}>
             <CurrentTime
