@@ -40,6 +40,7 @@ const CurrentTime = ({
         letterSpacing: letterSpacing,
         height: height,
         color: isDarkMode ? "#000" : color,
+        fontWeight: isDarkMode ? 900 : 0,
         display: "flex",
         alignItems: "center",
       }}
