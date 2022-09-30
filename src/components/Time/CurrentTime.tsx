@@ -23,6 +23,8 @@ const CurrentTime = ({
   let dateInterval: undefined | number | NodeJS.Timeout;
 
   const updateDate = () => setDate(new Date());
+  const getHours = date.getHours();
+  const getMinutes = date.getMinutes();
 
   useEffect(() => {
     dateInterval = setInterval(updateDate, 10000);
@@ -45,8 +47,8 @@ const CurrentTime = ({
         alignItems: "center",
       }}
     >
-      {date.getHours()}:
-      {(date.getMinutes() < 10 ? "0" : "") + date.getMinutes()}
+      {getHours < 10 ? "0" + getHours : getHours}:
+      {(getMinutes < 10 ? "0" : "") + getMinutes}
     </div>
   );
 };
