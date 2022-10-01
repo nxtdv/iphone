@@ -8,13 +8,18 @@ import mobilesignal from "/MobileSignal.svg";
 type Props = {
   lock: boolean;
   isDarkMode?: boolean;
+  inMode?: boolean;
 };
 
-const HeaderBar = ({ lock, isDarkMode }: Props) => {
+const HeaderBar = ({ lock, isDarkMode, inMode }: Props) => {
   return (
     <div
       className={`${styles.phoneHeader} ${
-        isDarkMode ? styles.phoneHeaderDark : styles.phoneHeaderLight
+        isDarkMode
+          ? inMode
+            ? styles.phoneHeaderLight
+            : styles.phoneHeaderDark
+          : styles.phoneHeaderLight
       }`}
       style={{ position: lock ? "relative" : "absolute" }}
     >
@@ -29,6 +34,7 @@ const HeaderBar = ({ lock, isDarkMode }: Props) => {
             letterSpacing="-0.41px"
             color="#fff"
             isDarkMode={isDarkMode}
+            inMode={inMode}
           />
         </div>
       )}

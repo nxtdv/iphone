@@ -6,6 +6,7 @@ type Props = {
   isDarkMode?: boolean;
   showStatusBar?: boolean;
   showHomeButton?: boolean;
+  inMode?: boolean;
 };
 
 function AppContainer({
@@ -13,10 +14,13 @@ function AppContainer({
   showStatusBar = true,
   isDarkMode,
   showHomeButton = true,
+  inMode = false,
 }: PropsWithChildren<Props>) {
   return (
     <>
-      {showStatusBar && <HeaderBar lock={false} isDarkMode={isDarkMode} />}
+      {showStatusBar && (
+        <HeaderBar lock={false} isDarkMode={isDarkMode} inMode={inMode} />
+      )}
       {children}
       {showHomeButton && <HomeBar isDarkMode={isDarkMode} />}
     </>

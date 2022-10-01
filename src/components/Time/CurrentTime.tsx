@@ -8,6 +8,7 @@ interface Time {
   height?: string;
   color: string;
   isDarkMode?: boolean;
+  inMode?: boolean;
 }
 
 const CurrentTime = ({
@@ -18,6 +19,7 @@ const CurrentTime = ({
   height,
   color,
   isDarkMode = false,
+  inMode,
 }: Time) => {
   const [date, setDate] = useState(new Date());
   let dateInterval: undefined | number | NodeJS.Timeout;
@@ -41,8 +43,8 @@ const CurrentTime = ({
         lineHeight: lineHeight,
         letterSpacing: letterSpacing,
         height: height,
-        color: isDarkMode ? "#000" : color,
-        fontWeight: isDarkMode ? 900 : 0,
+        color: isDarkMode ? (inMode ? "#fff" : "#000") : color,
+        fontWeight: isDarkMode ? (inMode ? 0 : 900) : 0,
         display: "flex",
         alignItems: "center",
       }}
