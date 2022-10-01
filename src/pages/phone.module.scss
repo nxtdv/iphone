@@ -127,8 +127,7 @@ textarea {
 
 /* Hide scrolls */
 ::-webkit-scrollbar {
-  width: 0px; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
+  display: none;
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
