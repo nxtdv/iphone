@@ -21,7 +21,12 @@ const HeaderBar = ({ lock, isDarkMode, inMode }: Props) => {
             : styles.phoneHeaderDark
           : styles.phoneHeaderLight
       }`}
-      style={{ position: lock ? "relative" : "absolute" }}
+      style={{
+        position: lock ? "relative" : "absolute",
+        background: inMode
+          ? "linear-gradient(to top, #ffffff00 0%, #000000 100%)"
+          : "none",
+      }}
     >
       {lock ? (
         <div className={styles.phoneHeaderLeft} />
