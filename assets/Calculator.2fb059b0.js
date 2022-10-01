@@ -1,0 +1,1 @@
+import{A as t}from"./AppContainer.e1c9a3d7.js";import{a}from"./index.02d37728.js";const r="_calculatorContainer_1tw7i_1",o={calculatorContainer:r},n=()=>a(t,{children:a("div",{className:o.calculatorContainer,children:"Calculator"})});export{n as default};
