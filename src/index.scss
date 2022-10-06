@@ -20,6 +20,15 @@ a {
   text-decoration: none;
 }
 
+input {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  outline-offset: none;
+}
+
 svg {
   width: auto;
   height: auto;
