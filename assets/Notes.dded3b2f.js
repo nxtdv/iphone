@@ -1,1 +1,0 @@
-import{A as t}from"./AppContainer.e1c9a3d7.js";import{a as n}from"./index.02d37728.js";const e="_notesContainer_zgqc5_1",o={notesContainer:e};function a(){return n(t,{isDarkMode:!0,children:n("div",{className:o.notesContainer,children:"Notes"})})}export{a as default};
