@@ -1,6 +1,7 @@
 import React, { ComponentType, LazyExoticComponent } from "react";
 import notesIcon from "/img/apps/Notes.png";
 import calculatorIcon from "/img/apps/Calculator.png";
+import photosIcon from "/img/apps/Photos.png";
 
 type PhoneApp<T extends ComponentType> = {
   id: string;
@@ -27,6 +28,14 @@ const appsRoutes: PhoneApp<any>[] = [
     title: "Calculette",
     route: "calculator/*",
     destination: "calculator",
+  },
+  {
+    id: "photos",
+    element: React.lazy(() => import("./Photos/Photos")),
+    iconPath: photosIcon,
+    title: "Photos",
+    route: "photos/*",
+    destination: "photos",
   },
 ];
 
