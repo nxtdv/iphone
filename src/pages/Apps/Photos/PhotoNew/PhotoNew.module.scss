@@ -1,0 +1,136 @@
+.photosNewContainer {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  padding: 42px 10px 0 12px;
+  background: #000;
+  color: #fff;
+
+  .backContainer {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 10px;
+
+    .backIcon {
+      svg {
+        fill: #0a84ff;
+        height: 12px;
+      }
+    }
+
+    .backTitle {
+      color: #0a84ff;
+      font-size: 10px;
+      margin-left: 5px;
+    }
+  }
+
+  .appName {
+    font-family: "SF-Pro-Text-Bold";
+    font-size: 19px;
+    margin: 9px 0 9px 24px;
+    letter-spacing: 0.37px;
+  }
+
+  .inputContainer {
+    display: flex;
+    justify-content: center;
+
+    .input {
+      width: 91%;
+      height: 23px;
+      font-size: 11px;
+      background: url(/search.svg) no-repeat 8px 6.5px rgba(118, 118, 128, 0.24);
+      border-radius: 7px;
+      padding: 0 0 0 25px;
+
+      &::placeholder {
+        color: #ebebf5;
+        opacity: 0.6;
+        font-size: 11px;
+      }
+    }
+  }
+
+  .previewContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+
+    .imageContainer {
+      width: 200px;
+      height: 200px;
+
+      .image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+      }
+    }
+
+    .imageActions {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 30px;
+      width: 100%;
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "SF-Pro-Text-Medium";
+        padding: 6px 20px;
+        width: 85px;
+        background: #007aff;
+        border-radius: 6px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .invalidLink {
+    display: flex;
+    color: #ff453a;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  .emptyContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+
+    .imageBorder {
+      display: flex;
+      justify-content: center;
+      border: 1px dashed #8e8e93;
+      width: 200px;
+      height: 200px;
+      border-radius: 6px;
+
+      .titleImageBorder {
+        display: flex;
+        align-items: center;
+        font-family: "SF-Pro-Text-Medium";
+        font-size: 10px;
+        color: #8e8e93;
+        margin-top: 10px;
+      }
+    }
+
+    .emptyText {
+      text-align: center;
+      width: 90%;
+      font-family: "SF-Pro-Text-Medium";
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  }
+}
