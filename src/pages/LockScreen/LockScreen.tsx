@@ -7,8 +7,8 @@ import CurrentDate from "../../components/Date/CurrentDate";
 import CurrentTime from "../../components/Time/CurrentTime";
 import styles from "./LockScreen.module.scss";
 import background from "/img/lockscreen.png";
-import camera from "/camera.svg";
-import flash from "/flash.svg";
+import camera from "/svg/camera.svg";
+import flash from "/svg/flash.svg";
 
 interface LockScreenProps {
   children: ReactNode;
@@ -33,7 +33,8 @@ interface onMove {
   xy: number[];
 }
 
-function linearConversion(a: number[], b: number[]) {
+function linearConversion(a: any, b: any) {
+  // number[]
   var o = a[1] - a[0],
     n = b[1] - b[0];
 
@@ -128,7 +129,8 @@ export function LockScreen({ children }: LockScreenProps) {
     onStartShouldSet: () => false,
     onRelease: onEnd,
     onTerminate: onEnd,
-    onMove: (state: onMove) => {
+    onMove: (state: any) => {
+      // onMove
       if (rightSheet.current) {
         const ry = showingPanel
           ? PANEL_THRESHOLD + state.delta[1]
@@ -160,7 +162,8 @@ export function LockScreen({ children }: LockScreenProps) {
         immediate: true,
       });
     },
-    onMoveShouldSet: ({ xy, initialDirection }: onMoveShouldSet) => {
+    onMoveShouldSet: ({ xy, initialDirection }: any) => {
+      // onMoveShouldSet
       if (showing || showingPanel) {
         if (initialDirection[1] < 0) {
           return true;
