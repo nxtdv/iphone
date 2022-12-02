@@ -1,4 +1,4 @@
-import Spinner from "/spinner.gif";
+import Spinner from "/img/spinner.gif";
 import styles from "./Loading.module.scss";
 
 const Loading = () => {

@@ -1,5 +1,5 @@
 import AppContainer from "../../../../components/AppContainer/AppContainer";
-import chevronLeft from "/chevronLeft.svg";
+import chevronLeft from "/svg/chevronLeft.svg";
 import styles from "./PhotoNew.module.scss";
 import { ImageProps } from "../../../../store/types";
 import { LazyLoadImage } from "react-lazy-load-image-component";

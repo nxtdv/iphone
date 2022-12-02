@@ -1,9 +1,9 @@
 import { ReactSVG } from "react-svg";
 import styles from "./HeaderBar.module.scss";
 import CurrentTime from "../Time/CurrentTime";
-import batterie from "/batterie.svg";
-import wifi from "/Wifi.svg";
-import mobilesignal from "/MobileSignal.svg";
+import batterie from "/svg/batterie.svg";
+import wifi from "/svg/Wifi.svg";
+import mobilesignal from "/svg/MobileSignal.svg";
 
 type Props = {
   lock: boolean;

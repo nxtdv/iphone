@@ -1,6 +1,6 @@
-import addButton from "/addButton.svg";
+import addButton from "/svg/addButton.svg";
 import AppContainer from "../../../../components/AppContainer/AppContainer";
-import photoLibrary from "/photoLibrary.svg";
+import photoLibrary from "/svg/photoLibrary.svg";
 import styles from "../Photos.module.scss";
 import { BottomNav } from "../../../../components/BottomNav/BottomNav";
 import { ImageProps } from "../../../../store/types";
